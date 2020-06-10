@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
  * 场景二：JSON比JavaBean少字段，在序列化时忽略多余字段
  * 用@JsonIgnore在字段级别忽略
  * 用@JsonIgnoreType在类级别忽略
- *
- * @author itutry
- * @create 2020-05-21_11:21
  */
 @RestController
 public class FieldsLessController {

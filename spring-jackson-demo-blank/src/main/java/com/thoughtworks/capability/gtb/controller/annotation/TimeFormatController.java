@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 场景六：JSON中的时间是特定格式，在序列化时指定时间格式
  * 使用@JsonFormat
- *
- * @author itutry
- * @create 2020-05-20_17:09
  */
 @RestController
 public class TimeFormatController {

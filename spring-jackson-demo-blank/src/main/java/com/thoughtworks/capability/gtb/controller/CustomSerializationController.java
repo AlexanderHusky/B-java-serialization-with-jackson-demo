@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 枚举序列化成数字的另一种实现
  * 使用自定义序列化器
- *
- * @author itutry
- * @create 2020-05-20_17:29
  */
 @RestController
 public class CustomSerializationController {

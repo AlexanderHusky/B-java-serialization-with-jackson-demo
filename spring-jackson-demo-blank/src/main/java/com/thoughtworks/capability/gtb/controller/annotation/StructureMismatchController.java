@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 场景四：结构不一致，在序列化时将对象拍平
  * 使用@JsonUnwrapped
- *
- * @author itutry
- * @create 2020-05-21_11:39
  */
 @RestController
 @Slf4j

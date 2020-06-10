@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 场景五：JSON中的枚举是数字形式，在序列化时使用枚举的序数值
  * 使用@JsonValue
- *
- * @author itutry
- * @create 2020-05-21_14:03
  */
 @RestController
 public class EnumOrdinalController {

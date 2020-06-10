@@ -10,9 +10,6 @@ import lombok.NoArgsConstructor;
 
 /**
  * 原生Jackson的使用示例
- *
- * @author itutry
- * @create 2020-05-20_20:17
  */
 public class JacksonUsageDemo {
 

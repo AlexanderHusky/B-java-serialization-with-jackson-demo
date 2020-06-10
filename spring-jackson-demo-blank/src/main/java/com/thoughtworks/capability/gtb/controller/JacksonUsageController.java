@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Spring Boot中Jackson的使用示例
- *
- * @author itutry
- * @create 2020-05-20_21:27
  */
 @RestController
 @Slf4j

@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 场景一：JSON比JavaBean多字段，在反序列化时忽略未知字段
  * 使用@JsonIgnoreProperties：可以忽略指定字段，也可以忽略本类所有未知字段
- *
- * @author itutry
- * @create 2020-05-21_10:38
  */
 @RestController
 @Slf4j

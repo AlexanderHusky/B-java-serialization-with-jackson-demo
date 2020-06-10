@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Spring MVC默认使用Jackson的示例
- *
- * @author itutry
- * @create 2020-05-20_21:46
  */
 @RestController
 @Slf4j
