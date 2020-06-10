@@ -1,9 +1,5 @@
 package com.thoughtworks.capability.gtb.controller;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import java.io.IOException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CustomSerializationController {
 
-  @GetMapping("/users/v2/{id}")
+  @GetMapping("/users/{id}")
   public UserVo getUserById(@PathVariable String id) {
     return new UserVo(id, "小红", Gender.FEMALE);
   }
@@ -35,18 +31,5 @@ public class CustomSerializationController {
 
   private static enum Gender {
     MALE, FEMALE;
-  }
-
-  private static class GenderSerializer extends StdSerializer<Gender> {
-
-    protected GenderSerializer() {
-      super(Gender.class);
-    }
-
-    @Override
-    public void serialize(Gender value, JsonGenerator gen, SerializerProvider provider)
-        throws IOException {
-      gen.writeNumber(value.ordinal());
-    }
   }
 }
