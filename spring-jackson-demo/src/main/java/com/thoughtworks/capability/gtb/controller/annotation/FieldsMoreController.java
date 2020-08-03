@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FieldsMoreController {
 
   @PostMapping("/cars")
-  public void createCar(@RequestBody CarVo car) {
+  public void createCar(@RequestBody Car car) {
     log.info("create car: {}", car);
   }
 
@@ -30,7 +30,7 @@ public class FieldsMoreController {
   @AllArgsConstructor
   @JsonIgnoreProperties(value = "year")
 //  @JsonIgnoreProperties(ignoreUnknown = true)
-  private static class CarVo {
+  private static class Car {
 
     private String color;
     private String type;

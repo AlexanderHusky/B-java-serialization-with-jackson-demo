@@ -19,20 +19,20 @@ public class DemoController {
 
   // @RequestBody接收对象时自动用Jackson反序列化
   @PostMapping("/students")
-  public void createStudent(@RequestBody StudentVo student) {
+  public void createStudent(@RequestBody Student student) {
     log.info("create student: {}", student);
   }
 
   // 返回对象时自动用Jackson序列化
   @GetMapping("/students/{id}")
-  public StudentVo getStudentById(@PathVariable("id") String id) {
-    return new StudentVo(id, "小红");
+  public Student getStudentById(@PathVariable("id") String id) {
+    return new Student(id, "小红");
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class StudentVo {
+  private static class Student {
 
     private String id;
     private String name;

@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class FieldsNameMismatchController {
 
   @GetMapping("/articles/{id}")
-  public ArticleVo getStudentById(@PathVariable("id") String id) {
-    return new ArticleVo(id, "论持久战");
+  public Article getStudentById(@PathVariable("id") String id) {
+    return new Article(id, "论持久战");
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class ArticleVo {
+  private static class Article {
 
     @JsonProperty("articleId")
     private String id;

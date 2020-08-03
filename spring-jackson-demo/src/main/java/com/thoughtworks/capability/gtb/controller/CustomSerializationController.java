@@ -23,14 +23,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomSerializationController {
 
   @GetMapping("/users/v2/{id}")
-  public UserVo getUserById(@PathVariable String id) {
-    return new UserVo(id, "小红", Gender.FEMALE);
+  public User getUserById(@PathVariable String id) {
+    return new User(id, "小红", Gender.FEMALE);
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class UserVo {
+  private static class User {
 
     private String id;
     private String name;

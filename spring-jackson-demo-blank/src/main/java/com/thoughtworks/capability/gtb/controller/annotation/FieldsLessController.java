@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class FieldsLessController {
 
   @GetMapping("/teachers/{id}")
-  public TeacherVo getStudentById(@PathVariable("id") String id) {
-    return new TeacherVo(id, "刘老师", Gender.FEMALE);
+  public Teacher getStudentById(@PathVariable("id") String id) {
+    return new Teacher(id, "刘老师", Gender.FEMALE);
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class TeacherVo {
+  private static class Teacher {
 
     private String id;
     private String name;

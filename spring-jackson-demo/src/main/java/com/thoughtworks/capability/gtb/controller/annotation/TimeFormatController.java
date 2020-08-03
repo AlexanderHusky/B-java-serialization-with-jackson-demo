@@ -2,6 +2,7 @@ package com.thoughtworks.capability.gtb.controller.annotation;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,20 +21,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class TimeFormatController {
 
   @GetMapping("/events/{id}")
-  public EventVo getEvent(@PathVariable("id") String id) {
-    return new EventVo(id, "pay", LocalDateTime.now());
+  public Event getEvent(@PathVariable("id") String id) {
+    return new Event(id, "pay", new Date());
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class EventVo {
+  private static class Event {
 
     private String id;
 
     private String name;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime time;
+    private Date time;
   }
 }

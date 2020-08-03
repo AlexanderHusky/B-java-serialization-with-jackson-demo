@@ -23,19 +23,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class StructureMismatchController {
 
   @PostMapping("/employees")
-  public void createEmployee(@RequestBody EmployeeVo employee) {
+  public void createEmployee(@RequestBody Employee employee) {
     log.info("create employee: {}", employee);
   }
 
   @GetMapping("/employees/{id}")
-  public EmployeeVo getStudentById(@PathVariable("id") String id) {
-    return new EmployeeVo(id, new Name("John", "Doe"));
+  public Employee getStudentById(@PathVariable("id") String id) {
+    return new Employee(id, new Name("John", "Doe"));
   }
 
   @Data
   @NoArgsConstructor
   @AllArgsConstructor
-  private static class EmployeeVo {
+  private static class Employee {
 
     private String id;
     @JsonUnwrapped
